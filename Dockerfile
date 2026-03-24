@@ -20,4 +20,4 @@ COPY . .
 
 RUN npm install
 
-CMD ["node", "servidor.js"]
+CMD ["node", "./servidor.js"]
