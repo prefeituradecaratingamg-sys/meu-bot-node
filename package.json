@@ -1,16 +1,14 @@
 {
-  "name": "agente-ia-chatbot-whatsapp",
+  "name": "whatsapp-bot",
   "version": "1.0.0",
-  "description": "Chatbot WhatsApp com IA Groq - Interface fácil para leigos",
+  "description": "Bot WhatsApp com IA",
   "main": "servidor.js",
   "scripts": {
     "start": "node servidor.js"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "openai": "^4.52.0",
-    "qrcode": "^1.5.3",
-    "socket.io": "^4.7.2",
+    "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.24.0"
   }
 }
