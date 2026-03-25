@@ -576,16 +576,12 @@ async function handleMessage(msg) {
 // =====================================
 // INICIAR SERVIDOR
 // =====================================
-server.listen(PORT, () => {
-  console.log(`
-╔══════════════════════════════════════════════════════════╗
-║  🤖 VENDEDOR IA — CHATBOT WHATSAPP v2.0                  ║
-║                                          ║
-║    Abra no navegador: https://meu-bot-node-production.up.railway.app           ║
-║                                                          ║
-║  O QR Code aparecerá na tela - escaneie com o WhatsApp!  ║
-╚══════════════════════════════════════════════════════════╝
-  `);
-  io.emit("qr", "loading");
-  initWhatsApp();
+app.get("/", (req, res) => {
+  res.send("Bot WhatsApp rodando 🚀");
 });
+
+server.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+
+
