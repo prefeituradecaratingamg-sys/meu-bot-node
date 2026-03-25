@@ -580,8 +580,8 @@ server.listen(PORT, () => {
   console.log(`
 ╔══════════════════════════════════════════════════════════╗
 ║  🤖 VENDEDOR IA — CHATBOT WHATSAPP v2.0                  ║
-║                                                          ║
-║  Abra no navegador:  http://localhost:${PORT}             ║
+║                                          ║
+║    Abra no navegador: https://meu-bot-node-production.up.railway.app           ║
 ║                                                          ║
 ║  O QR Code aparecerá na tela - escaneie com o WhatsApp!  ║
 ╚══════════════════════════════════════════════════════════╝
