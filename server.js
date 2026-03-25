@@ -17,7 +17,7 @@ const OpenAI = require("openai");
 // =====================================
 // CONFIGURAÇÃO
 // =====================================
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 const CONFIG_FILE = path.join(__dirname, "config.json");
 
 let groqClient = null;
@@ -576,12 +576,16 @@ async function handleMessage(msg) {
 // =====================================
 // INICIAR SERVIDOR
 // =====================================
-app.get("/", (req, res) => {
-  res.send("Bot WhatsApp rodando 🚀");
-});
-
 server.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`
+╔══════════════════════════════════════════════════════════╗
+║  🤖 VENDEDOR IA — CHATBOT WHATSAPP v2.0                  ║
+║                                                          ║
+║  Abra no navegador:  http://localhost:${PORT}             ║
+║                                                          ║
+║  O QR Code aparecerá na tela - escaneie com o WhatsApp!  ║
+╚══════════════════════════════════════════════════════════╝
+  `);
+  io.emit("qr", "loading");
+  initWhatsApp();
 });
-
-
