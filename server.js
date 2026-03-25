@@ -17,7 +17,7 @@ const OpenAI = require("openai");
 // =====================================
 // CONFIGURAÇÃO
 // =====================================
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const CONFIG_FILE = path.join(__dirname, "config.json");
 
 let groqClient = null;
